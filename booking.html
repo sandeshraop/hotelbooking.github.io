@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Book your stay at Sunny Stay Hotel through our easy-to-use booking form." />
+  <title>Sunny Stay Hotel - Booking</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav role="navigation" aria-label="Primary Navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="booking.html" class="active" aria-current="page">Booking</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="booking" class="section-center" tabindex="-1">
+      <h2>Book Your Stay</h2>
+      <form action="#" method="POST" novalidate>
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required placeholder="Your full name" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="example@mail.com" />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210" pattern="(\+91\s?)?[6-9]\d{9}" />
+
+        <label for="checkin">Check-in Date</label>
+        <input type="date" id="checkin" name="checkin" required />
+
+        <label for="checkout">Check-out Date</label>
+        <input type="date" id="checkout" name="checkout" required />
+
+        <label for="roomtype">Room Type</label>
+        <select id="roomtype" name="roomtype" required>
+          <option value="" disabled selected>Select a room</option>
+          <option>Standard Room</option>
+          <option>Deluxe Room</option>
+          <option>Suite</option>
+        </select>
+
+        <fieldset>
+          <legend>Number of Guests</legend>
+          <label><input type="radio" name="guests" value="1" required /> 1</label>
+          <label><input type="radio" name="guests" value="2" /> 2</label>
+          <label><input type="radio" name="guests" value="3+" /> 3+</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Options</legend>
+          <label><input type="checkbox" name="requests" value="special" /> Special requests</label>
+          <label><input type="checkbox" name="newsletter" value="subscribe" /> Subscribe to newsletter</label>
+        </fieldset>
+
+        <div class="buttons">
+          <button type="submit" onclick="event.preventDefault(); alert('Booking Successfull');">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

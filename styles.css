@@ -1,0 +1,349 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: honeydew;
+  color: darkslategray;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: steelblue;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1em 0;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+nav li a {
+  color: white;
+  font-weight: bold;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+nav li a:hover,
+nav li a:focus {
+  background-color: lightsteelblue;
+  color: black;
+  outline: none;
+}
+
+nav li a.active {
+  background-color: white;
+  color: steelblue;
+}
+
+main {
+  padding: 6em 1em 2em;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-center {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 3em;
+}
+
+#home img {
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px gray;
+  transition: transform 0.4s ease;
+}
+
+#home img:hover,
+#home img:focus {
+  transform: scale(1.05) rotate(3deg);
+  outline: none;
+}
+
+#home h1 {
+  color: steelblue;
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+#home p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.room-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  padding: 0;
+}
+
+.room-item {
+  background: white;
+  padding: 1em;
+  border-radius: 12px;
+  box-shadow: 5px 5px 20px lightgray;
+  width: 280px;
+  text-align: left;
+  transition: box-shadow 0.3s ease;
+}
+
+.room-item:hover,
+.room-item:focus-within {
+  box-shadow: 8px 8px 30px rgba(70, 70, 70, 0.3);
+  outline: none;
+}
+
+.room-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.8em;
+  transition: transform 0.3s ease;
+}
+
+.room-item img:hover,
+.room-item img:focus {
+  transform: scale(1.05);
+  outline: none;
+}
+
+.room-item h3 {
+  color: steelblue;
+  margin-top: 0;
+}
+
+.amenities {
+  list-style-type: square;
+  margin-left: 1.2em;
+  color: dimgray;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 5px 5px 20px lightgray;
+  font-size: 1rem;
+}
+
+th,
+td {
+  padding: 0.9em 1em;
+  border-bottom: 1px solid lightgray;
+  text-align: left;
+}
+
+th {
+  background-color: steelblue;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: honeydew;
+}
+
+tbody tr:hover,
+tbody tr:focus-within {
+  background-color: lightsteelblue;
+  transition: background-color 0.3s ease;
+  outline: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background: white;
+  padding: 1.5em;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px lightgray;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: 600;
+  color: steelblue;
+  margin-bottom: 0.2em;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+  padding: 0.6em;
+  border: 1.5px solid lightgray;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus {
+  border-color: steelblue;
+  outline: none;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+fieldset legend {
+  font-weight: 600;
+  color: steelblue;
+  margin-bottom: 0.5em;
+}
+
+.buttons {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+button {
+  background-color: steelblue;
+  color: white;
+  border: none;
+  padding: 0.8em 2em;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 3px 3px 10px lightsteelblue;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: lightsteelblue;
+  animation: pulse 1s infinite alternate;
+  color: black;
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 10px lightsteelblue;
+  }
+  to {
+    box-shadow: 0 0 25px steelblue;
+  }
+}
+
+#contact ul {
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  margin: 0 auto 2em;
+  font-size: 1.2rem;
+  color: darkslategray;
+}
+
+#contact li {
+  margin: 1em 0;
+}
+
+#contact a {
+  color: steelblue;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+#contact a:hover,
+#contact a:focus {
+  color: royalblue;
+  outline: none;
+}
+
+.map-container {
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 5px 5px 25px lightgray;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.map-container iframe:hover,
+.map-container iframe:focus {
+  transform: scale(1.02);
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    gap: 1em;
+  }
+  .room-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  main {
+    padding: 6em 1em 2em;
+  }
+}
+
+.video-section {
+    padding: 0.5em 0 2em;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
